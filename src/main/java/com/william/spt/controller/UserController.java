@@ -2,6 +2,8 @@ package com.william.spt.controller;
 
 
 import com.william.spt.core.BaseController;
+import com.william.spt.core.Result;
+import com.william.spt.core.ResultGenerator;
 import com.william.spt.entity.User;
 import com.william.spt.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,10 +35,10 @@ public class UserController extends BaseController {
      * Description: 测试
      */
     @RequestMapping(value = "/getUser", method = RequestMethod.GET)
-    public User index(){
+    public Result index(){
+        ResultGenerator resultMsg = new ResultGenerator();
         User user = userService.selectById(1);
-        logger.info("user="+user);
-        return user;
+        return resultMsg.getSuccessResult(user);
     }
 
     /**
