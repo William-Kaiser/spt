@@ -1,15 +1,14 @@
 package com.william.spt.controller;
 
 
+import com.william.spt.core.BaseController;
 import com.william.spt.entity.User;
 import com.william.spt.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import com.william.spt.core.BaseController;
 
 /**
  * <p>
@@ -20,8 +19,9 @@ import com.william.spt.core.BaseController;
  * @since 2018-02-28
  */
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/api/user")
 public class UserController extends BaseController {
+
     @Autowired
     private UserService userService;
 
@@ -35,7 +35,7 @@ public class UserController extends BaseController {
     @RequestMapping(value = "/getUser", method = RequestMethod.GET)
     public User index(){
         User user = userService.selectById(1);
-        System.out.println("user="+user);
+        logger.info("user="+user);
         return user;
     }
 
@@ -51,5 +51,6 @@ public class UserController extends BaseController {
         userService.insert(user);
         return user;
     }
+
 }
 
