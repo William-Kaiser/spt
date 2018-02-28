@@ -1,29 +1,33 @@
 package com.william.spt.entity;
 
-
-import com.william.spt.core.BaseEntity;
+import com.baomidou.mybatisplus.annotations.TableField;
+import com.baomidou.mybatisplus.activerecord.Model;
+import java.io.Serializable;
 
 /**
+ * <p>
+ * 
+ * </p>
+ *
  * @author william
+ * @since 2018-02-28
  */
-public class User extends BaseEntity {
+public class User extends Model<User> {
 
-    private Integer userId;
-    /**
-     *   用户姓名
-     */
+    private static final long serialVersionUID = 1L;
+
+    private Integer id;
+    @TableField("user_name")
     private String userName;
-    /**
-     *   密码
-     */
     private String password;
 
-    public Integer getUserId() {
-        return userId;
+
+    public Integer getId() {
+        return id;
     }
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getUserName() {
@@ -42,5 +46,17 @@ public class User extends BaseEntity {
         this.password = password;
     }
 
-}
+    @Override
+    protected Serializable pkVal() {
+        return this.id;
+    }
 
+    @Override
+    public String toString() {
+        return "User{" +
+        ", id=" + id +
+        ", userName=" + userName +
+        ", password=" + password +
+        "}";
+    }
+}

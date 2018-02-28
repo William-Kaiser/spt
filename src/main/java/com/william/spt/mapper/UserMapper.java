@@ -1,11 +1,16 @@
 package com.william.spt.mapper;
 
-
-import com.william.spt.core.BaseMapper;
 import com.william.spt.entity.User;
-import org.apache.ibatis.annotations.Mapper;
+import com.baomidou.mybatisplus.mapper.BaseMapper;
 
-@Mapper
+/**
+ * <p>
+ *  Mapper 接口
+ * </p>
+ *
+ * @author william
+ * @since 2018-02-28
+ */
 public interface UserMapper extends BaseMapper<User> {
 
 }
