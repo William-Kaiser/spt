@@ -1,6 +1,7 @@
 package com.william.spt.config;
 
 import com.alibaba.fastjson.serializer.SerializerFeature;
+import com.alibaba.fastjson.serializer.ValueFilter;
 import com.alibaba.fastjson.support.config.FastJsonConfig;
 import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
 import com.william.spt.interceptor.JwtTokenInterceptor;
@@ -54,6 +55,16 @@ public class MyWebMvcConfigurerAdapter extends WebMvcConfigurerAdapter {
                 SerializerFeature.WriteNullListAsEmpty,
                 SerializerFeature.WriteNullBooleanAsFalse
         );
+        fastJsonConfig.setDateFormat("yyyy-MM-dd HH:mm:ss");
+        ValueFilter valueFilter = new ValueFilter() {
+            public Object process(Object o, String s, Object o1) {
+                if (null == o1) {
+                    o1 = "";
+                }
+                return o1;
+            }
+        };
+        fastJsonConfig.setSerializeFilters(valueFilter);
         fastConverter.setFastJsonConfig(fastJsonConfig);
         //将fastjson添加到视图消息转换器列表内
         converters.add(fastConverter);
