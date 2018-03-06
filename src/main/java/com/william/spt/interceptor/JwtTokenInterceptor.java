@@ -21,23 +21,23 @@ public class JwtTokenInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object o) throws Exception {
 
         //自动排除生成token的路径,并且如果是options请求是cors跨域预请求，设置allow对应头信息
-        if(request.getRequestURI().equals("/token") || RequestMethod.OPTIONS.toString().equals(request.getMethod())) {
-            return true;
-        }
+//        if(request.getRequestURI().equals("/token") || RequestMethod.OPTIONS.toString().equals(request.getMethod())) {
+//            return true;
+//        }
 
         //其他请求获取头信息
-        final String authHeader = request.getHeader("token");
-        try {
-            //如果没有header信息
-            if (authHeader == null || authHeader.trim() == "") {
-                throw new SignatureException("not found token.");
-            }
-        } catch (Exception e) {
-            PrintWriter writer = response.getWriter();
-            writer.write(e.getMessage());
-            writer.close();
-            return false;
-        }
+//        final String authHeader = request.getHeader("token");
+//        try {
+//            //如果没有header信息
+//            if (authHeader == null || authHeader.trim() == "") {
+//                throw new SignatureException("not found token.");
+//            }
+//        } catch (Exception e) {
+//            PrintWriter writer = response.getWriter();
+//            writer.write(e.getMessage());
+//            writer.close();
+//            return false;
+//        }
         return true;
     }
 

@@ -1,5 +1,8 @@
 package com.william.spt.entity;
 
+import com.baomidou.mybatisplus.enums.IdType;
+import java.util.Date;
+import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.activerecord.Model;
 import java.io.Serializable;
@@ -10,16 +13,28 @@ import java.io.Serializable;
  * </p>
  *
  * @author william
- * @since 2018-02-28
+ * @since 2018-03-06
  */
 public class User extends Model<User> {
 
     private static final long serialVersionUID = 1L;
 
+    @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
+    /**
+     * 姓名
+     */
     @TableField("user_name")
     private String userName;
+    /**
+     * 密码
+     */
     private String password;
+    /**
+     * 更新时间
+     */
+    @TableField("update_date")
+    private Date updateDate;
 
 
     public Integer getId() {
@@ -46,6 +61,14 @@ public class User extends Model<User> {
         this.password = password;
     }
 
+    public Date getUpdateDate() {
+        return updateDate;
+    }
+
+    public void setUpdateDate(Date updateDate) {
+        this.updateDate = updateDate;
+    }
+
     @Override
     protected Serializable pkVal() {
         return this.id;
@@ -57,6 +80,7 @@ public class User extends Model<User> {
         ", id=" + id +
         ", userName=" + userName +
         ", password=" + password +
+        ", updateDate=" + updateDate +
         "}";
     }
 }
