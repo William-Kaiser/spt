@@ -1,11 +1,13 @@
-package com.william.spt.controller;
+package com.william.admin.controller;
 
 
-import com.william.spt.core.Result;
-import com.william.spt.core.ResultCode;
-import com.william.spt.core.ResultGenerator;
-import com.william.spt.entity.User;
-import com.william.spt.service.UserService;
+
+import com.william.admin.entity.User;
+import com.william.admin.service.UserService;
+import com.william.core.base.BaseController;
+import com.william.core.base.Result;
+import com.william.core.base.ResultCode;
+import com.william.core.base.ResultGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import com.william.spt.core.BaseController;
 
 /**
  * <p>

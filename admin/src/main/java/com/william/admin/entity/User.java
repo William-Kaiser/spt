@@ -1,4 +1,4 @@
-package com.william.spt.entity;
+package com.william.admin.entity;
 
 import com.baomidou.mybatisplus.enums.IdType;
 import java.util.Date;

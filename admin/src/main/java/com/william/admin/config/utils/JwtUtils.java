@@ -1,4 +1,4 @@
-package com.william.spt.utils;
+package com.william.admin.config.utils;
 
 import com.william.admin.entity.User;
 import io.jsonwebtoken.Claims;

@@ -1,4 +1,4 @@
-package com.william.spt.core;
+package com.william.core.base;
 
 /**
  * 响应码枚举，参考HTTP状态码的语义

@@ -1,19 +1,14 @@
-package com.william.spt.config;
+package com.william.admin.config;
 
 import com.baomidou.mybatisplus.generator.AutoGenerator;
-import com.baomidou.mybatisplus.generator.InjectionConfig;
 import com.baomidou.mybatisplus.generator.config.DataSourceConfig;
 import com.baomidou.mybatisplus.generator.config.GlobalConfig;
 import com.baomidou.mybatisplus.generator.config.PackageConfig;
 import com.baomidou.mybatisplus.generator.config.StrategyConfig;
-import com.baomidou.mybatisplus.generator.config.TemplateConfig;
 import com.baomidou.mybatisplus.generator.config.converts.MySqlTypeConvert;
 import com.baomidou.mybatisplus.generator.config.rules.DbColumnType;
 import com.baomidou.mybatisplus.generator.config.rules.DbType;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
-
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * mybatis-plus代码生成器
@@ -28,7 +23,7 @@ public class MyBatisPlusGenerator {
 
         // 全局配置
         GlobalConfig gc = new GlobalConfig();
-        gc.setOutputDir("D:\\spt\\spt\\src\\main\\java");
+        gc.setOutputDir("D:\\spt\\spt\\admin\\src\\main\\java");
         gc.setFileOverride(true);
         gc.setActiveRecord(true);
         gc.setEnableCache(false);// XML 二级缓存
@@ -81,7 +76,7 @@ public class MyBatisPlusGenerator {
         // 自定义 service 实现类父类
         // strategy.setSuperServiceImplClass("com.william.spt.core.BaseServiceImpl");
         //自定义 controller 父类
-        strategy.setSuperControllerClass("com.william.spt.core.BaseController");
+        strategy.setSuperControllerClass("com.william.core.base.BaseController");
         // 实体是否生成字段常量（默认 false）
         // public static final String ID = "test_id";
         // strategy.setEntityColumnConstant(true);
@@ -94,14 +89,14 @@ public class MyBatisPlusGenerator {
 
         // 包配置
         PackageConfig pc = new PackageConfig();
-        pc.setParent(null);
+//      pc.setParent(null);
 //		pc.setModuleName("test");
-        pc.setEntity("com.william.spt.entity");
-        pc.setMapper("com.william.spt.mapper");
-        pc.setXml("com.william.spt.mapper.xml");
-        pc.setService("com.william.spt.service");
-        pc.setServiceImpl("com.william.spt.service.impl");
-        pc.setController("com.william.spt.controller");
+        pc.setEntity("com.william.admin.entity");
+        pc.setMapper("com.william.admin.mapper");
+        pc.setXml("com.william.admin.mapper.xml");
+        pc.setService("com.william.admin.service");
+        pc.setServiceImpl("com.william.admin.service.impl");
+        pc.setController("com.william.admin.controller");
         mpg.setPackageInfo(pc);
 
         // 执行生成

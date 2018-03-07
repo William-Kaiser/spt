@@ -1,4 +1,4 @@
-package com.william.spt.mapper;
+package com.william.admin.mapper;
 
 import com.william.admin.entity.User;
 import com.baomidou.mybatisplus.mapper.BaseMapper;

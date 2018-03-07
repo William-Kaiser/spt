@@ -1,4 +1,4 @@
-package com.william.spt.core;
+package com.william.core.base;
 
 import com.alibaba.fastjson.JSON;
 

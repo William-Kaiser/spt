@@ -1,8 +1,8 @@
-package com.william.spt.service.impl;
+package com.william.admin.service.impl;
 
 import com.william.admin.entity.User;
 import com.william.admin.mapper.UserMapper;
-import com.william.spt.service.UserService;
+import com.william.admin.service.UserService;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

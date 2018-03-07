@@ -1,4 +1,4 @@
-package com.william.spt.service;
+package com.william.admin.service;
 
 import com.william.admin.entity.User;
 import com.baomidou.mybatisplus.service.IService;

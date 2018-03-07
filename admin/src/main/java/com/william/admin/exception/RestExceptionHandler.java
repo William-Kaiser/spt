@@ -1,7 +1,7 @@
 package com.william.admin.exception;
 
-import com.william.spt.core.Result;
-import com.william.spt.core.ResultGenerator;
+import com.william.core.base.Result;
+import com.william.core.base.ResultGenerator;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,4 +1,4 @@
-package com.william.spt.config;
+package com.william.admin.config;
 
 import com.baomidou.mybatisplus.plugins.PaginationInterceptor;
 import org.mybatis.spring.annotation.MapperScan;
@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@MapperScan("com.william.spt.mapper*")
+@MapperScan("com.william.admin.mapper*")
 public class MybatisPlusConfig {
 
     /**

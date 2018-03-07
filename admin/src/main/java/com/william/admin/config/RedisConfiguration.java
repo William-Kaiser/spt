@@ -1,4 +1,4 @@
-package com.william.spt.config;
+package com.william.admin.config;
 
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.CachingConfigurerSupport;

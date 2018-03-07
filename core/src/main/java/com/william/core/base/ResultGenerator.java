@@ -1,4 +1,4 @@
-package com.william.spt.core;
+package com.william.core.base;
 
 /**
  * 响应结果生成工具

@@ -6,7 +6,11 @@
 	<groupId>com.example</groupId>
 	<artifactId>spt</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<modules>
+		<module>core</module>
+		<module>admin</module>
+	</modules>
+	<packaging>pom</packaging>
 
 	<name>spt</name>
 	<description>Demo project for Spring Boot</description>
