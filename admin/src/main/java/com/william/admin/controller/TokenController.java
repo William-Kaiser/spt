@@ -4,7 +4,7 @@ package com.william.admin.controller;
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.william.admin.entity.User;
 import com.william.admin.service.UserService;
-import com.william.admin.config.utils.JwtUtils;
+import com.william.admin.utils.JwtUtils;
 import com.william.core.base.BaseController;
 import com.william.core.base.ResultGenerator;
 import org.apache.commons.lang3.StringUtils;
